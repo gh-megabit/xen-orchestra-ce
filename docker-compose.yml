@@ -2,8 +2,10 @@ version: '3'
 services:
     orchestra:
         restart: unless-stopped
-        image: ezka77/xen-orchestra-ce:latest
         container_name: XO_server
+        build:
+            context: ./alpine
+            dockerfile: Dockerfile
         ports:
             - "8000:8000"
             - "443:8443"

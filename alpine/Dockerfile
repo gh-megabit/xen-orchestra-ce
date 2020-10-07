@@ -8,7 +8,7 @@ RUN apk add --no-cache git python2 g++ make bash
 RUN npm install url-loader --save-dev
  
 # Clone git and remove .git
-RUN git clone -b master --depth 1 https://github.com/vatesfr/xen-orchestra/
+RUN git clone -b master --depth 1 https://github.com/gh-megabit/xen-orchestra/
 
 # patches
 COPY patches /home/node/xen-orchestra/patches
