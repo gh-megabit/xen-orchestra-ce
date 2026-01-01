@@ -47,7 +47,7 @@ WORKDIR /home/node/libvhdi
 RUN ./synclibs.sh
 RUN ./autogen.sh
 RUN ./configure
-RUN make && make install
+RUN make -j $(nproc) && make install
 
 # REMCO
 FROM golang:alpine3.21 as build-remco
